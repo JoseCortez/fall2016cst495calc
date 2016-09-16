@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>87F0FDB1-3B13-4896-936E-1F66B65D8E1E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Calculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6C0427D80461BA082F3F07E5EF1C07B19A97C2AD</key>
+		<string>https://github.com/JoseCortez/fall2016cst495calc.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Calculator/Calculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6C0427D80461BA082F3F07E5EF1C07B19A97C2AD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JoseCortez/fall2016cst495calc.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6C0427D80461BA082F3F07E5EF1C07B19A97C2AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6C0427D80461BA082F3F07E5EF1C07B19A97C2AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>fall2016cst495calc</string>
+		</dict>
+	</array>
+</dict>
+</plist>
