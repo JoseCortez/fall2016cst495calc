@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     @IBAction func Clear() {      //assignment 1
         history.text = "History";
         display.text = "0"
+        brain.clearVariables()
         
     }
 //    func performOperation2(operation: Double -> Double){
@@ -66,13 +67,13 @@ class ViewController: UIViewController {
     
     @IBAction func enter() {
         userIsInTheMiddleOfTypingANumber = false
-        history.text = history.text! + "," +  "\(displayValue)"
+        history.text = history.text! + "," +  "\(displayValue!)"
         //operandStack.append(displayValue)
-        if let result = brain.pushOperand(displayValue){
+        if let result = brain.pushOperand(displayValue!){
             displayValue = result
         }else{
             
-            displayValue = 0;
+            displayValue = nil;
         }
 
     }
@@ -80,16 +81,25 @@ class ViewController: UIViewController {
     
     @IBAction func operate(sender: UIButton) {
         //let operation = sender.currentTitle!    //assignment 1
-        if userIsInTheMiddleOfTypingANumber
-        {
-            enter()
-        }
+        
         if let operation = sender.currentTitle   //assignment 2
         {
+            if userIsInTheMiddleOfTypingANumber && operation != "→M"
+            {
+                enter()
+            }
+            if operation == "→M" {
+                brain.variableValues["M"] = displayValue
+                userIsInTheMiddleOfTypingANumber = false
+            }
+            if operation == "M" {
+                brain.pushOperand(operation)
+            }
+            
             if let result = brain.performOperation(operation) {
                 displayValue = result
             } else {
-                displayValue = 0
+                displayValue = nil
             }
         }
         
@@ -99,12 +109,12 @@ class ViewController: UIViewController {
     //var displayVAlue: Double?
 
 
-    var displayValue: Double{
+    var displayValue: Double?{
         get{
             return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
         }
         set{
-            display.text = "\(newValue)"
+            display.text = "\(newValue!)"
             //userIsInTheMiddleOfTypingANumber = true
             
         }
